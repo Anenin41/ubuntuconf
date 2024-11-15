@@ -1,0 +1,114 @@
+" Author:   Dimitris Deyannis
+" Editor:   Konstantine Garas
+" E-mail:   d.deyannis@gmail.com
+" Modified: Thu 14 Nov 2024 @ 19:36:39 +0100
+
+" Initialize plugins
+call plug#begin()
+
+Plug 'lervag/vimtex'
+
+call plug#end()
+
+" Configuration for vimtex plugin
+filetype plugin indent on
+
+" Enable syntax highlighting
+syntax on
+
+" Show matching brackets when text indicator is over them
+set showmatch
+
+" Ignore case when searching
+set ignorecase
+
+" Jump to matching search result
+set incsearch
+
+" Light background
+set background=dark
+
+" Visual mode color
+hi Visual ctermbg=018
+
+" Matching brackets color
+hi MatchParen ctermbg=018
+
+
+" Set column at 81 chars
+set colorcolumn=81
+hi ColorColumn ctermbg=018
+
+" Enable ruler
+set ruler
+
+" General colors
+hi StatusLine	ctermfg=018 ctermbg=010
+hi StatusLineNC	ctermfg=018 ctermbg=010
+hi VertSplit	ctermfg=018 ctermbg=010
+
+" Enable mouse scroll
+set mouse=a
+
+" Display line numbers
+set number
+"set relativenumber
+hi LineNr ctermfg=033
+
+" Split right
+set splitright
+
+" Use system clipboard
+set clipboard=unnamedplus
+
+" Up to 20 files
+" Save up to 2000 lines
+" Maximum item size 2MB
+" No hlsearch  
+set viminfo='20,<2000,s2048,h
+
+" Set automatic spell check on specific files
+au BufRead *.txt set spell
+au BufRead *.tex set spell
+
+" Highlight misspelled words
+hi SpellBad ctermfg=015 ctermbg=001
+hi SpellCap ctermfg=015 ctermbg=001
+
+" Set tab at 4 spaces for certain file types
+augroup FileTypeSpecificAutocommands
+	autocmd FileType log		setlocal tabstop=4 softtabstop=4 shiftwidth=4
+	autocmd FileType dat		setlocal tabstop=4 softtabstop=4 shiftwidth=4
+	autocmd FileType conf		setlocal tabstop=4 softtabstop=4 shiftwidth=4
+	autocmd FileType sshconf	setlocal tabstop=4 softtabstop=4 shiftwidth=4
+	autocmd FileType tex		setlocal tabstop=4 softtabstop=4 shiftwidth=4
+	autocmd FileType md		setlocal tabstop=4 softtabstop=4 shiftwidth=4
+	autocmd FileType javascript	setlocal tabstop=4 softtabstop=4 shiftwidth=4
+	autocmd FileType json		setlocal tabstop=4 softtabstop=4 shiftwidth=4
+	autocmd FileType html		setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+	autocmd FileType css		setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+	autocmd FileType jl		setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
+
+" Change the 'Modified:' tag upon saving 
+" Covers both '@chdr' and '@shhdr' mappings
+autocmd Bufwritepre,filewritepre * execute "normal ma"
+autocmd Bufwritepre,filewritepre * exe "1," . 6 . "g/ Modified:.*/s/ Modified:.*/ Modified: " .strftime("%a %d %b %Y @ %H:%M:%S %z")
+autocmd bufwritepost,filewritepost * execute "normal `a"
+
+" Disable beeps and flashes
+set visualbell
+set noerrorbells
+set t_vb=
+
+" Do not expand TABs to spaces
+set noexpandtab
+
+" Jump to the last position when reopening a file
+if has("autocmd")
+	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$")
+	    \| exe "normal! g'\"" | endif
+endif
+
+" Add mappings
+source ~/.vim/mappings.vim
