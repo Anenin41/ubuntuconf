@@ -1,0 +1,35 @@
+% Template for simple LaTeX document %
+% Author: Konstantine Garas
+% E-mail: kgaras041@gmail.com // k.gkaras@student.rug.nl
+% Created: Wed 27 Nov 2024 @ 16:06:56 +0100
+% Modified: Wed 27 Nov 2024 @ 17:27:32 +0100
+
+% PACKAGES %
+\documentclass[twocolumn]{article}
+\usepackage[utf8]{inputenc}			% UTF-8 encoding.
+\usepackage{geometry}				% Custom page margins.
+\usepackage{enumitem}				% Custom list environments.
+\usepackage{amssymb}				% Checkboxes.
+
+% Custom Margins
+\geometry{a4paper, margin=0.5in}
+
+% CUSTOM COMMANDS
+\newcommand{\checkbox}{\(\square\)}
+
+\begin{document}
+
+% Single-column title above two-column content
+\twocolumn[
+	\begin{center}
+		{\LARGE \bfseries TITLE \\[10pt]}
+		{\large AUTHOR \\[5pt]}
+		{\small \today}
+	\end{center}
+	\vspace{10pt}
+]
+
+\section*{Section}
+Placeholder text.
+
+\end{document}
