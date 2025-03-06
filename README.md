@@ -1,2 +1,2 @@
 # Ubuntu Configuration Files
-This repository contains my personal configuration files for the Ubuntu OS.
+My configuration files for Ubuntu.

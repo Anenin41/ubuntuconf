@@ -1,6 +1,6 @@
 " Author:   Dimitris Deyannis
 " E-mail:   d.deyannis@gmail.com
-" Modified: Thu 14 Nov 2024 @ 19:40:39 +0100
+" Modified: Tue 04 Mar 2025 @ 21:04:21 +0100
 
 " RUG file header for languages that accept # for comments
 inoremap @uhdr 
@@ -18,6 +18,15 @@ inoremap @mhdr
 \<CR>% E-mail: kgaras041@gmail.com // k.gkaras@student.rug.nl
 \<CR>% Created: <C-R>=strftime("%a %d %b %Y @ %H:%M:%S %z")<CR>
 \<CR>% Modified:
+\<CR><CR>
+
+" Julia file header
+inoremap @jhdr 
+\# file description #
+\<CR># Author: Konstantine Garas
+\<CR># E-mail: kgaras041@gmail.com
+\<CR># Created: <C-R>=strftime("%a %d %b %Y @ %H:%M:%S %z")<CR>
+\<CR># Modified:
 \<CR><CR>
 
 " C file header
