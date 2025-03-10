@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# Author:   Konstantine Garas
+# E-mail:   kgaras041@gmail.com
+# Created:  Mon 10 Mar 2025 @ 22:34:18 +0100
+# Modified: Mon 10 Mar 2025 @ 22:55:45 +0100
+
+# Apt package manager, fetch and apply updates on packages
+sudo apt-get update ; sudo apt-get upgrade
+
+# Apply upgrades on the Linux distro
+sudo apt dist-upgrade
+
+# Firmware update
+fwupdmgr update
+
+# In-app updates
+cd ~ ; juliaup update ; rustup update
