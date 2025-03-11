@@ -1,2 +1,1 @@
-# Setup custom LaTeX article template
-`cp -r LaTeX ~/LaTeX`
+```cp -r LaTeX ~/LaTeX```
