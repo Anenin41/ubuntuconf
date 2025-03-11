@@ -1,0 +1,22 @@
+#!/bin/sh
+#
+# Author:   Konstantine Garas
+# E-mail:   kgaras041@gmail.com
+# Created:  Tue 11 Mar 2025 @ 21:51:21 +0100
+# Modified: Tue 11 Mar 2025 @ 22:14:10 +0100
+
+# check if VPN connection is active
+if nmcli connection show --active | grep -q "Osaka"; then
+	# unmount the library of Alexandria
+	gio mount -u LIBRARY_OF_ALEXANDRIA
+	echo "Alexandria successfully dismounted."
+	# close the VPN
+	nmcli connection down Osaka
+else
+	# open the VPN
+	nmcli connection up Osaka
+	# invoke alias which mounts the library of alexandria
+	gio mount LIBRARY_OF_ALEXANDRIA
+	echo "Alexandria successfully mounted."
+fi
+
