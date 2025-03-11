@@ -1,2 +1,1 @@
-# Ubuntu Configuration Files
-My configuration files for Ubuntu.
+```My configuration files for Ubuntu.```
