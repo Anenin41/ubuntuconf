@@ -1,5 +1,5 @@
 # Setup custom vim configurations and mappings
-cp -r . ~/.vim```
+cp -r . ~/.vim
 cp vimrc ~/.vimrc
 
 # Install the autoload plugin
