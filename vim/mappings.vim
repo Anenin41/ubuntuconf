@@ -1,11 +1,11 @@
 " Author:   Dimitris Deyannis
 " E-mail:   d.deyannis@gmail.com
-" Modified: Tue 04 Mar 2025 @ 21:04:21 +0100
+" Modified: Tue 25 Mar 2025 @ 12:58:22 +0100
 
 " RUG file header for languages that accept # for comments
 inoremap @uhdr 
 \# file description #
-\<CR># Author: Konstantine Garas
+\<CR># Author: Konstantinos Garas
 \<CR># E-mail: kgaras041@gmail.com // k.gkaras@student.rug.nl
 \<CR># Created: <C-R>=strftime("%a %d %b %Y @ %H:%M:%S %z")<CR>
 \<CR># Modified:
@@ -14,7 +14,7 @@ inoremap @uhdr
 " RUG file header for languages that accept % for comments
 inoremap @mhdr 
 \% file description %
-\<CR>% Author: Konstantine Garas
+\<CR>% Author: Konstantinos Garas
 \<CR>% E-mail: kgaras041@gmail.com // k.gkaras@student.rug.nl
 \<CR>% Created: <C-R>=strftime("%a %d %b %Y @ %H:%M:%S %z")<CR>
 \<CR>% Modified:
@@ -23,16 +23,28 @@ inoremap @mhdr
 " Julia file header
 inoremap @jhdr 
 \# file description #
-\<CR># Author: Konstantine Garas
+\<CR># Author: Konstantinos Garas
 \<CR># E-mail: kgaras041@gmail.com
 \<CR># Created: <C-R>=strftime("%a %d %b %Y @ %H:%M:%S %z")<CR>
 \<CR># Modified:
 \<CR><CR>
 
+" Tagbar Keybind
+nmap <F12>  :TagbarToggle<CR> 
+
+" Rust file header
+inoremap @rust 
+\// file description //
+\<CR>// Author: Konstantinos Garas
+\<CR>// E-mail: kgaras041@gmail.com
+\<CR>// Created: <C-R>=strftime("%a %d %b %Y @ %H:%M:%S %z")<CR>
+\<CR>// Modified:
+\<CR><CR>
+
 " C file header
 inoremap @chdr 
 \<CR> #
-\<CR> # Author:   Konstantine Garas
+\<CR> # Author:   Konstantinos Garas
 \<CR> # E-mail:   kgaras041@gmail.com
 \<CR> # Created:  <C-R>=strftime("%a %d %b %Y @ %H:%M:%S %z")<CR>
 \<CR> # Modified: 

@@ -1,13 +1,14 @@
 " Author:   Dimitris Deyannis
 " Editor:   Konstantine Garas
 " E-mail:   d.deyannis@gmail.com
-" Modified: Tue 04 Mar 2025 @ 21:01:58 +0100
+" Modified: Tue 25 Mar 2025 @ 12:55:28 +0100
 
 " Initialize plugins
 call plug#begin()
 
 Plug 'lervag/vimtex'
 Plug 'rust-lang/rust.vim'
+Plug 'preservim/tagbar'
 Plug 'JuliaEditorSupport/julia-vim'
 
 call plug#end()
@@ -36,8 +37,10 @@ hi Visual ctermbg=018
 " Matching brackets color
 hi MatchParen ctermbg=018
 
-" Remove auto commenting # when pressing Enter on Julia files
+" Remove auto commenting Comment-Characters
+"  when pressing Enter on Julia, Rust files
 autocmd FileType julia setlocal formatoptions-=cro
+autocmd FileType rust  setlocal formatoptions-=cro
 
 " Set column at 81 chars
 set colorcolumn=81
