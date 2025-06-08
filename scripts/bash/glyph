@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#
+# Author:   Konstantine Garas
+# E-mail:   kgaras041@gmail.com
+# Created:  Mon 10 Mar 2025 @ 23:17:08 +0100
+# Modified: Sun 08 Jun 2025 @ 23:41:47 +0200
+
+# Safety flags
+set -euo pipefail
+
+source ~/Documents/Projects/Python/venv/bin/activate
+
+if (( $# == 0 )); then
+	exec python3 "$HOME/Documents/Git/glyph/src/glyph"
+else
+	exec python3 "$HOME/Documents/Git/glyph/src/glyph" "$@"
+fi
+	
